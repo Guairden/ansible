@@ -23,10 +23,10 @@
 define('DB_NAME', 'wordPressDb');
 
 /** MySQL database username */
-define('DB_USER', 'myUser');
+define('DB_USER', 'vhoyet');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'azertyuiop');
+define('DB_PASSWORD', 'password');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
