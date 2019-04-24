@@ -1,0 +1,30 @@
+---
+
+- name: Install mysql, python, pip, libmysqlclient-dev
+  apt: 
+    name: "{{ item }}"
+    state: present
+  with_items: 
+      - mysql-server
+      - python
+      - python-pip
+      - libmysqlclient-dev
+
+- name: Install mysql-python
+  pip:
+    name: MySQL-python
+
+- name: Create user
+  mysql_user:
+    name: vhoyet
+    password: password
+    priv: '*.*:ALL'
+    state: present
+    login_user: root
+ 
+- name: Create database
+  mysql_db:
+    name: wordPressDb
+    state: present
+    login_user: vhoyet
+    login_password: "password"

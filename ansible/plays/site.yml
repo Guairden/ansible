@@ -1,0 +1,10 @@
+---
+
+- name: Install FTP server and MySQL and Apache with PHP
+  hosts: all
+  become: true
+  
+  roles:
+    - mySql
+    - apache
+    - ftpServer
